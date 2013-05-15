@@ -1,0 +1,138 @@
+Source: meegotouch-controlpanelapplets
+Section: devel
+Priority: optional
+Maintainer: David Kedves <dkedves@blumsoft.eu>
+Build-Depends: debhelper (>= 5), libduicontrolpanel-dev (>= 0.8.0),
+               libmeegotouch-dev (>= 0.20.37), libqmsystem2-dev,
+               libprofile-qt-dev (>= 0.13), system-ui-dev (>= 0.16),
+               libqttracker-dev, libthumbnailer-dev, libcontentmanager-dev,
+               devicelock-dev, doxygen, clean-device-dev (>= 0.0.3),
+               libuserguide-dev, libqtm-dev, libqtm-systeminfo-dev
+Standards-Version: 3.8.0
+
+Package: systemui-applets-tests
+Section: devel
+Priority: optional
+Architecture: any
+Depends: ${shlibs:Depends}, duicontrolpanel-usbapplet,
+         duicontrolpanel-batteryapplet, duicontrolpanel-aboutapplet,
+         duicontrolpanel-displayapplet, duicontrolpanel-profileapplet,
+         duistatusindicatormenu-profileplugin, duicontrolpanel-themeapplet,
+         duicontrolpanel-wallpaperapplet, duicontrolpanel-resetapplet,
+         duicontrolpanel-warrantyapplet, duicontrolpanel-offlineapplet
+XB-Maemo-CI-Packages: systemui-applets-tests
+XB-Maemo-CI-Stage: fast, staging
+Description: Test package for meegotouch-controlpanelapplets
+
+Package: systemui-applets-l10n-engineering-english
+Section: devel
+Architecture: all
+Description: Engineering English translations for meegotouch-controlpanelapplets packages.
+
+Package: libmeegocontrol-doc
+Section: devel
+Priority: optional
+Architecture: all
+Description: Documentation for libmeegocontrol
+
+Package: libmeegocontrol0
+Architecture: any
+Section: libs
+Depends: ${shlibs:Depends}
+Description: libmeegocontrol to use some controlpanel applet as a library
+
+Package: libmeegocontrol-dev
+Architecture: any
+Section: libdevel
+Depends: libmeegocontrol0 (= ${binary:Version}), libthumbnailer-dev
+Description: libmeegocontrol development files
+
+Package: duicontrolpanel-offlineapplet
+Section: misc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libduicontrolpanel,
+         systemui-applets-l10n-engineering-english
+Description: Offline settings applet.
+
+Package: duicontrolpanel-usbapplet
+Section: misc
+Architecture: any
+Depends: ${shlibs:Depends}, duicontrolpanel,
+         systemui-applets-l10n-engineering-english
+Description: USB applet for the control panel application
+
+Package: duicontrolpanel-batteryapplet
+Provides: duistatusindicatormenu-batteryplugin
+Section: misc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libduicontrolpanel,
+         systemui-applets-l10n-engineering-english, libuserguide
+Description: Battery settings applet.
+
+Package: duicontrolpanel-displayapplet
+Section: misc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, duicontrolpanel,
+         systemui-applets-l10n-engineering-english
+Description: Display settings applet.
+
+Package: duicontrolpanel-profileapplet
+Section: misc
+Architecture: any
+Provides: duicontrolpanel-ledapplet
+Depends: ${shlibs:Depends}, ${misc:Depends}, duicontrolpanel,
+         systemui-applets-l10n-engineering-english
+Description: Profiles settings applet.
+
+Package: duicontrolpanel-themeapplet
+Section: misc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, duicontrolpanel,
+         systemui-applets-l10n-engineering-english
+Description: Theme changing applet.
+
+Package: duicontrolpanel-wallpaperapplet
+Section: misc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqttracker1pre6, 
+         tumbler, libthumbnailer0, duicontrolpanel, 
+         systemui-applets-l10n-engineering-english
+Description: Desktop wallpaper changing applet.
+
+Package: duicontrolpanel-resetapplet
+Section: misc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, duicontrolpanel,
+         systemui-applets-l10n-engineering-english, clean-device
+Description: Device clearing and restore settings applet.
+
+Package: duicontrolpanel-aboutapplet
+Section: misc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, duicontrolpanel,
+         systemui-applets-l10n-engineering-english, libcellular-qt1
+Description: The about-product applet that shows device and software
+ informations.
+
+Package: duicontrolpanel-warrantyapplet
+Section: misc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, duicontrolpanel,
+         systemui-applets-l10n-engineering-english
+Description: The warranty applet that shows the warranty information.
+
+Package: duicontrolpanel-testapplet
+Section: misc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, duicontrolpanel,
+         systemui-applets-l10n-engineering-english
+Description: Testapplet to manual test duicontrolpanel.
+
+Package: duistatusindicatormenu-profileplugin
+Section: misc
+Architecture: any
+Provides: duistatusindicatormenu-volumeplugin
+Depends: ${shlibs:Depends}, ${misc:Depends},
+         systemui-applets-l10n-engineering-english
+Description: Profile status indicator menu plugin.
+

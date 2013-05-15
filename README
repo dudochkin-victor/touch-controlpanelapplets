@@ -1,0 +1,16 @@
+MeeGoTouch controlpanel applets:
+================================
+
+# Building without tests [on .deb based systems]
+
+DEB_BUILD_OPTIONS=nocheck dpkg-buildpackage -rfakeroot -b
+
+# UT/FT TESTING:
+
+ dpkg-buildpackage -rfakeroot -b; fakeroot dpkg -i ../*deb;
+ testrunner.py -f /usr/share/systemui-applets-tests/tests.xml -o result.xml
+
+# TESTING COVERAGE:
+
+ ./gen-coverage.sh;
+ # result'll be available: coverage/index.html

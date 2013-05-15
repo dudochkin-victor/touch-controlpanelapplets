@@ -1,0 +1,19 @@
+QMAKE_LFLAGS_RPATH = -Wl
+
+# extending include path
+INCLUDEPATH += /usr/include/libmeegocontrol
+DEPENDPATH += /usr/include/libmeegocontrol
+
+LIBS += -lmeegocontrol
+
+CONFIG += \
+    meegotouch 
+
+LIBS += \
+    -lqttracker \
+    -lthumbnailer
+
+INCLUDEPATH += \
+    /usr/include/QtTracker \
+    /usr/include/thumbnailer 
+

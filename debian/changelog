@@ -1,0 +1,498 @@
+meegotouch-controlpanelapplets (0.17.4-1) meegotouch; urgency=low
+
+  * Update the desktop files according to the new categories in controlpanel
+  * Fixes: NB#199672 - Able to see highlight on other theme item for sometime 
+    until theme is updated completely.
+  * Fixes: NB#201102 - Sometimes value text on USB item doesn't get updated to
+    the selected usb mode.
+  * Fixes: NB#197172 - Grid type view checkmark icon is not consistent with the
+    application design.
+  * Fixes: NB#201029 - Sorting of images in Wallpaper applet is different after
+    warm flash
+  * Fixes: NB#201437 - wallpaper; §qtn_wall_wallpaper§ contains wrong menu, 
+    'user guide'
+  * Apply qmsystem Maemo -> MeeGo namespace change
+  * Implemented: SWP#DUI-4315 Layout changes to Profiles applet and Profiles
+    status menu
+  * Fixes: NB#202356 - libmeegocontrol-dev lacks dependency on libthumbnailer-dev
+
+ -- David Kedves <dkedves@blumsoft.eu>  Thu, 04 Nov 2010 12:00:36 +0200
+
+meegotouch-controlpanelapplets (0.17.3-1) meegotouch; urgency=low
+
+  [ David Kedves ]
+  * Use QtMobility to fetch IMEI (and not some closed source lib)
+  * Use QNetworkInterface to get hardware addresses...
+  * Fixes: NB#200236 - meegotouch-controlpanelapplets 0.17.1 can not be
+    recompiled
+
+ -- David Kedves <dkedves@blumsoft.eu>  Wed, 27 Oct 2010 11:25:17 +0200
+
+meegotouch-controlpanelapplets (0.17.2-1) meegotouch; urgency=low
+
+  [ Zoltan Nyul ]
+  * Battery applet updated to the new ui spec
+  * Context Sensitive help button added to the battery applet
+
+  [ David Kedves ]
+  * Make userguide dependency as optional (as it closed-source)
+
+ -- David Kedves <dkedves@blumsoft.eu>  Mon, 25 Oct 2010 13:11:22 +0200
+
+meegotouch-controlpanelapplets (0.17.1-1) meegotouch; urgency=low
+
+  * Fixes: NB#198310 - Able to select one more theme before one theme change
+    is complete.
+
+ -- David Kedves <dkedves@blumsoft.eu>  Mon, 18 Oct 2010 10:04:34 +0200
+
+meegotouch-controlpanelapplets (0.16.1-1) meegotouch; urgency=low
+
+  * Introducing libmeegocontrol
+  * libMeegoControl documentation added
+  * Fixes: NB#194506 - Impossible to select a wallpaper
+    image using the contentpicker.
+  * Fixes: NB#194787 - On tapping on theme applet repeatedly
+    multiple dialogs are coming up.
+  * Fixes: NB#194853 - list does not change back to the current theme,
+    if you cancel the theme dialog box by clicking outside
+  * Fixes: NB#194409 - After setting the wall paper form gallery or the
+    wallpaper mainview, current wallpaper thumbnail doesn't get set
+    to the currently set image.
+  * Fixes:NB#187326 -  Reset settings buttons too close to each other in
+    portrait
+  * Updated desktop files to make ContectAction able to launch
+    the settings applets via duicontrolpanels servicefw.
+  * Using the new grid layout in the wallpaper applet.
+  * Fixes: NB#184799 - wallpaper doesn't reset on doing reset settings.
+  * Re-added missing restore-original-settings scripts...
+    (for battery, theme, display, wallpaper and usb applets)
+  * Update wallpaper-backup mechanism... (backup-fw will deprecate "dir" type
+    backup locations...)
+
+ -- David Kedves <dkedves@blumsoft.eu>  Tue, 12 Oct 2010 16:15:17 +0200
+
+systemui-applets (0.15.4-1) meegotouch; urgency=low
+
+  * Fixes: NB#191264 -  Off and activate/deactivate power saver button looks
+    like overlapping in battery applet in a given scenario.
+  * Fixes: NB#188734 -  no profile icon seen in status menu when the profile is 
+    other than Normal.
+  * Fixes: NB#192443 -  settings application closes after tap on wallpaper
+    button from Look & Feel page
+
+ -- David Kedves <dkedves@blumsoft.eu>  Thu, 16 Sep 2010 14:17:27 +0200
+
+systemui-applets (0.15.3-1) meegotouch; urgency=low
+
+  * Fixes: empty about-product-applet
+
+ -- David Kedves <dkedves@blumsoft.eu>  Mon, 13 Sep 2010 11:50:29 +0200
+
+systemui-applets (0.15.2-1) meegotouch; urgency=low
+
+  [ Laszlo Pere ]
+  * Fixes: NB#190055 -  Wallpaper cannot be set continuously in wallpaper 
+    setting view via selecting from Gallery.
+  * Fixes: NB#184762 - Not able to load a large sized image in wallpaper applet.
+
+  [ David Kedves ]
+  * Fixes: NB#190694 -  COREWEB: /usr/bin/sysuid
+    'MDialogBlancoViewPrivate::setCentralWidget'
+
+ -- David Kedves <dkedves@blumsoft.eu>  Fri, 10 Sep 2010 10:21:31 +0200
+
+systemui-applets (0.15.1-1) meegotouch; urgency=low
+
+  [ David Kedves ]
+  * PO-timer available in 'Warranty' applet
+  * Fixed theming problems in 'Usb' applet
+  * Fixes: NB#188540 -  Activate/Deactivate power saver button is right
+    aligned. Same is the case with activate and deactivate Offline mode.
+
+  [ Laszlo Pere ]
+  * Fixes: NB#188534 -  Profile settings uses wrong object names
+  * Fixes: NB#188206 -  Battery settings use wrong object names
+  * Fixes: NB#188213 -  Display settings uses wrong object names
+  * Fixes: NB#188710 -  Order of the profiles is wrong in Profile settings
+  * Fixes: NB#188712 -  Order of the profiles is wrong in Profile selection
+    dialog
+  * Fixes: NB#188091 -  Profile status menu plug-in uses incorrect icons and 
+    incorrect title
+  * Fixes: NB#188537 -  Theme applet uses MContentItem for OVI store
+
+  [ Zoltan Nyul ]
+  * Fixes: NB#184073  -  Show text Charging complete and Charging
+    complete icon in Battery settings UI when the battery has reached
+    FULL state
+
+  [ David Kedves ]
+  * Fixes: NB#187290 - current wallpaper view has a sound icon + wrong font
+  * Fixes: NB#188718 - Battery settings view should not have a view menu
+  * Fixes: NB#188289 - USB settings button group uses wrong layout
+
+ -- David Kedves <dkedves@blumsoft.eu>  Thu, 02 Sep 2010 16:11:01 +0200
+
+systemui-applets (0.14.17-1) harmattan; urgency=low
+
+  * Fixed a destructor crash in Theme-applets ThemeWidget class 
+
+ -- David Kedves <dkedves@blumsoft.eu>  Thu, 26 Aug 2010 10:55:38 +0200
+
+systemui-applets (0.14.16-1) harmattan; urgency=low
+
+  * Fixes: NB#185858 - Wrong text layout in setting of Wallpaper from Gallery
+  * Fixes: NB#177534 - cannot manually deactivate PSM if
+                       entered to PSM automatically
+  * Fixes: NB#186764 -  View Menu should not be shown on Theme setting view
+  * Fixes: NB#183127 - User guide improvements...
+  * Fixes: NB#187166 -  Theme dialog doesn't close by tapping on select button
+    in theme dialog.
+  * Fixes: NB#187083 - Need of unique IDs for several objects [profile applet]
+  * Fixes: NB#186822 - Device system ordering problem
+  * Fixes: NB#187315 - Connectivity: activate offline mode not at the top
+  * Fixes: NB#187306 - Large gap in between 1st item and title bar in theme
+  * Fixes: NB#187354 - Theme chooser doesnt find themes
+  * Fixes: NB#187290 - current wallpaper view has a sound icon + wrong font
+
+ -- David Kedves <dkedves@blumsoft.eu>  Tue, 24 Aug 2010 14:58:43 +0200
+
+systemui-applets (0.14.15-1) harmattan; urgency=low
+
+  * Fixes: NB#185694 - Device-lock query is not displayed while doing
+                       reset-settings/clear-user-data
+  * Fixes: NB#183195 -  No banners or confirmation dialogue shown on activating
+                        and deactivating offline mode from connectivity view.
+
+ -- David Kedves <dkedves@blumsoft.eu>  Thu, 19 Aug 2010 12:02:56 +0200
+
+systemui-applets (0.14.14-1) harmattan; urgency=low
+
+  [ Laszlo Pere ]
+  * Fixes NB#184751 - Able to move the wallpaper image outside the screen and
+    set the same as wallpaper.
+  * A test script added.
+  * The wallpaper command line program has been removed, we use DBus now.
+
+ -- Laszlo Pere <lpere@blumsoft.eu>  Thu, 12 Aug 2010 07:51:30 +0200
+
+systemui-applets (0.14.13-1) harmattan; urgency=low
+
+  [ Laszlo Pere ]
+  * Fixes: NB#182044 - Wallpaper applet does not support background images
+    set by theme IDs.
+  * Fixes: NB#181622 - select profile dialog is shown on lock ui.
+  * Fixes: NB#180067 - Wallpaper can't be set correctly.
+  * Fixes: NB#182578 - Icon temporarily displayed under selected themes
+  * Fixes: NB#182709 - systemui-applets is not buildable with cs2009q3 toolchain
+
+ -- David Kedves <dkedves@blumsoft.eu>  Fri, 30 Jul 2010 15:21:41 +0200
+
+systemui-applets (0.14.12-2) harmattan; urgency=low
+
+  [ Laszlo Pere ]
+  * Fixes: NB#180999 - Wallpaper image must be changed separately to landscape
+    and portrait modes
+  * Fixes: NB#179836 -  Display settings: wrong spelling for backlight time-out
+    values §qtn_comm_time_second§
+
+  [ David Kedves ]
+  * Wallpaper-applet backup enhancements...
+  * Fixes: NB#181605 - Profiles applet view is not proper.
+
+ -- David Kedves <dkedves@blumsoft.eu>  Fri, 23 Jul 2010 12:32:39 +0200
+
+systemui-applets (0.14.11-1) harmattan; urgency=low
+
+  [ Laszlo Pere ]
+  * Showing the remaining times as charging until the charging state is not
+    changed (but still not animating if the battery is full).
+  * Fixes: NB#168748 - Wallpaper applet can not set GIF image as wallpaper to 
+    home
+  * Fixes: NB#175984 - The progress spinner is not shown on Theme setting 
+    main view
+  * Fixes: NB#175015 - Icon for "Get more from Ovi Store" is missing in Theme
+    setting main view
+
+ -- David Kedves <dkedves@blumsoft.eu>  Mon, 12 Jul 2010 14:41:04 +0200
+
+systemui-applets (0.14.10-1) harmattan; urgency=low
+
+  [ Robert Manner ]
+  * Fixes: NB#174929 - Presenting order of setting items on Look & Feel
+    is incorrect
+
+  [ David Kedves ]
+  * Fixes: NB#173717 - Auto active power save mode set psm_threshold wrongly
+  * Fixes: NB#177154 - Update the UI properly on PSMValueChanged signal
+  * Fixes: NB#177148 - Items in Display applet are not aligned properly
+  * Use the correct translation and logical ids in theme applet
+  * Use the correct translation and logical ids in wallpaper applet
+  * Fixes: NB#177003 - Do not load engineering englishes by hand...
+  * Fixes: NB#177572 - Failed to display the software version
+
+  [ Laszlo Pere ]
+  * Fixes: NB#172929 - Battery applet in Settings->Device system->Battery 
+    should stop animating once battery is full
+  * Fixes: NB#177846 - Profile status indicator menu plug-in doesn't close 
+    status menu
+  * Fixes: NB#177984 - systemui-applets depends on deprecated 
+    libduithumbnailer0.
+
+ -- David Kedves <dkedves@blumsoft.eu>  Fri, 02 Jul 2010 22:40:12 +0200
+
+systemui-applets (0.14.9-1) harmattan; urgency=low
+
+  [ David Kedves ]
+  * Fixes: NB#176448 - [Estimated time] Should be in hours if > 1 hour
+
+  [ Sandor Pinter ]
+  * Adding backup support for wallpaper applet
+
+ -- David Kedves <dkedves@blumsoft.eu>  Thu, 24 Jun 2010 14:45:51 +0200
+
+systemui-applets (0.14.8-1) harmattan; urgency=low
+
+  * Fixes: NB#176163 - Battery icon in Energy UI is blinking
+                       instead of animating
+
+ -- David Kedves <dkedves@blumsoft.eu>  Wed, 23 Jun 2010 12:47:09 +0200
+
+systemui-applets (0.14.7-1) harmattan; urgency=low
+
+  [ Laszlo Pere ]
+  * Fixes: NB#174533 - Theme selector crashes when it cannot find deprecated 
+                       stuff from index.theme
+  * Made and improved a lot of unit tests...
+
+  [ David Kedves ]
+  * Fixes: NB#174928 - Display plugin should be under Device system
+  * Fixed charger animation rates according to ui specification
+  * Rewritten business logic (no more uses the sysuid d-bus api)
+  * Fixes: NB#172929 - Battery applet should stop animating once battery
+                       is full
+  * Fixed battery-applet ui initialization [slider value not initialized]
+  * Fixed the battery-applet icon-sizing issue
+  * Fixed the usb-applets layout
+  * About applet: logical id fixes
+  * About applet: added nokia-logo
+  * Display applet: load the correct translation catalogue
+  * USB applet fixes: notification handling improved...
+  * Display applet: layout fixes...
+  * Fixes: NB#174999 - Status menu is closes after selecting the profile.
+  * ResetApplet: use the real translation
+  * ResetApplet: fixed the text truncation issue...
+  * Fixes: NB#175377 - Clear device dialog not a query but a normal dialog
+  * Fixes: NB#175370 - Reset settings dialog is not a query but a normal
+    dialog
+
+ -- David Kedves <dkedves@blumsoft.eu>  Tue, 22 Jun 2010 10:53:32 +0200
+
+systemui-applets (0.14.6-2) harmattan; urgency=low
+
+  [ David Kedves ]
+  * Fixes: NB#170735 - No Error message shown if user tries to change the
+                       USB mode in USB setting view, while the USB cable is
+                       connecting with the device.
+  * Partially fixed NB#171105 - Translation Broken in Profiles
+  * Fixes: NB#173930 - Translation broken in USB
+  * Fixes: NB#173960 - Translations Broken in Battery settings
+
+  [ Sandor Pinter ]
+  * Changing profile dcp applet according to lates UI-spec
+  * Changing profile statusindicatormenu
+  * Fixes: NB#171105 - Translation Broken in Profiles
+
+ -- David Kedves <dkedves@blumsoft.eu>  Mon, 14 Jun 2010 14:51:08 +0200
+
+systemui-applets (0.14.5-1) harmattan; urgency=low
+
+  * Re-tag to match with the functional test package version...
+
+ -- David Kedves <dkedves@blumsoft.eu>  Mon, 07 Jun 2010 09:04:22 +0200
+
+systemui-applets (0.14.3-1) harmattan; urgency=low
+
+  [ David Kedves ]
+  * Drop volume-control from this package
+    (moved to system-ui)
+
+  [ Viktor Nagy ]
+  * Theme applet ui update.
+    Fixes: NB#170758 - Indicating the selected Theme item is incorrect
+
+  [ David Kedves ]
+  * Version bump
+  * Fixes: NB#172483 - Random sysuid crash found during swapping windows
+    from one to other
+
+ -- David Kedves <dkedves@blumsoft.eu>  Fri, 04 Jun 2010 12:23:25 +0200
+
+systemui-applets (0.14.1-1) harmattan; urgency=low
+
+  * Fixes: NB#170573 - Value text of USB item shows 'Always ask - Always ask
+    Active' instead of 'Always ask, Mass storage mode/Ovi Suite mode Active'
+    when connected in 'Mass storage/Ovi Suite mode'.
+  * Fixes: NB#170685 - Volume slider colors are strange when listening music
+    and receiving call
+  * Fixes: NB#170813 - Volume indicator is displayed if SMS notification
+    appears for the first time after start
+  * Fixes: NB#171609 - Making phone call always shows volumebar 
+
+ -- David Kedves <dkedves@blumsoft.eu>  Tue, 01 Jun 2010 15:20:43 +0200
+
+systemui-applets (0.13.9-1) harmattan; urgency=low
+
+  * Fixes: NB#169777 - Power save mode logic problems
+  * Turn on word-wrapping for about and warranty applets
+
+ -- David Kedves <dkedves@blumsoft.eu>  Thu, 20 May 2010 13:42:42 +0200
+
+systemui-applets (0.13.8-1) harmattan; urgency=low
+
+  * Display UI layout changes...
+  * Use resource policy in volume-control
+  * Fixes: NB#168419 - HW Zoom keys shound't launch volume slider while
+                       in camera precapture view
+  * Fixes: NB#168531 - Volume level info bar is shown on screen every time
+                       when volume level is changed
+  * Fixes: NB#168708 - Volume level control buttons behavior should not change
+                       depending on the screen orientation
+  * Energy UI: Power Save Mode fixes...
+  * Energy UI: Fixed icon/animation handling in battery-settings ui
+  * Theme applet fixes (brief updates when theme changed)
+
+ -- David Kedves <dkedves@blumsoft.eu>  Tue, 18 May 2010 07:11:53 +0200
+
+systemui-applets (0.13.7-1) harmattan; urgency=low
+
+  * Lazy-init in volume-applet (for faster sysuid startup)
+  * Fixes: NB#162431 - Status bar is not always displayed (it is too nice)
+
+ -- David Kedves <dkedves@blumsoft.eu>  Tue, 11 May 2010 11:26:49 +0200
+
+systemui-applets (0.13.6-1) harmattan; urgency=low
+
+  * Wallpaper fixes:
+    - a segfault fix
+    - title bar haight has been changed
+  * About applet delayed initialization
+
+ -- David Kedves <dkedves@blumsoft.eu>  Fri, 07 May 2010 15:29:01 +0200
+
+systemui-applets (0.13.5-1) harmattan; urgency=low
+
+  * Bugfix for testapplet (crash)
+  * Wallpaper-applet: Use the same bage as duihome as the default one
+  * Added warranty applet (not fully working, not yet specified properly)
+  * Fixed all the compile warnings
+
+ -- David Kedves <dkedves@blumsoft.eu>  Fri, 07 May 2010 10:26:47 +0200
+
+systemui-applets (0.13.4-1) harmattan; urgency=low
+
+  * Removed the ledapplet, it is now an empty debian package.
+  * Improvements in wallpaper-applet
+  * Bugfixes for volume-control
+
+ -- David Kedves <dkedves@blumsoft.eu>  Thu, 06 May 2010 11:53:35 +0200
+
+systemui-applets (0.13.3-1) harmattan; urgency=low
+
+  [ László Pere ]
+  * Fixes: NB#165600 - Unable to change the Wall paper. 
+  * Fixes: NB#165814 - Problems with setting brightness in Settings
+  [ David Kedves ]
+  * Remove batteryplugin from source tree
+  * Volume control updates:
+    - add pulseaudio-module-meego-mainvolume dependency
+    - update the DBus API (d-bus math meegoized now)
+  * Updated UI for Display applet, Battery applet, USB applet
+  * Using usb_moded for usb businesslogic
+
+ -- David Kedves <dkedves@blumsoft.eu>  Wed, 28 Apr 2010 09:30:47 +0200
+
+systemui-applets (0.13.2-1) harmattan; urgency=low
+
+  * Newly implemented: Reset applet
+  * Newly implemented: Wallpaper applet
+  * Newly implemented: About applet
+
+ -- David Kedves <dkedves@blumsoft.eu>  Fri, 23 Apr 2010 08:20:00 +0200
+
+systemui-applets (0.13.1) harmattan; urgency=low
+
+  * Implemented: SWP#DUI-2063 - Volume Control UI -
+                 Interactive Slider (overlay)
+  * Implemented: SWP#DUI-2626 - Volume control status menu plugin
+  * Implemented: SWP#DUI-2627 - Volume control HW key support
+  * (Volume control will starts work when mainvolume PulseAudio module
+     released)
+  * Disabled battery statusindicatormenu plugin (dropped)
+  * Fully meegotouch compatible
+  * Now plugins uses MStatusIndicatorMenu interface
+
+ -- David Kedves <dkedves@blumsoft.eu>  Mon, 19 Apr 2010 12:08:34 +0200
+
+systemui-applets (0.12.7) harmattan; urgency=low
+
+  * Fix a build error
+
+ -- David Kedves <dkedves@blumsoft.eu>  Thu, 01 Apr 2010 16:14:35 +0200
+
+systemui-applets (0.12.6) harmattan; urgency=low
+
+  * Adjusting dependencies...
+  * Fixes: NB#161391 - duistatusindicatormenu utilizing CPU all the time
+
+ -- David Kedves <dkedves@blumsoft.eu>  Thu, 01 Apr 2010 15:21:24 +0200
+
+systemui-applets (0.12.5) harmattan; urgency=low
+
+  [Laszlo Pere]
+  Implemented: SWP#DUI430 - User changable theme setting dcp applet
+  [David Kedves]
+  * Fixes: NB#161508 - Display blanks in 2 minutes even though the 
+                       timeout is set to 5 minutes
+  * Fixes some problems in Profile applet and plugin about l18n
+
+ -- David Kedves <dkedves@blumsoft.eu>  Tue, 30 Mar 2010 11:08:28 +0200
+
+systemui-applets (0.12.4) harmattan; urgency=low
+
+  * Fixes: NB#159842 - Sliders handle in battery applet covers is not hiding 
+    and covers the text above it
+  * Fixes: NB#159315 - Battery indicator doesn't show the battery capacity
+    correctly
+
+ -- David Kedves <dkedves@blumsoft.eu>  Thu, 18 Mar 2010 09:37:28 +0100
+
+systemui-applets (0.12.3-1) harmattan; urgency=low
+
+  * Icon-id fix in volumebarplugin
+
+ -- David Kedves <dkedves@blumsoft.eu>  Tue, 16 Mar 2010 11:55:49 +0100
+
+systemui-applets (0.12.3) harmattan; urgency=low
+
+  * Fixes: NB#156759 - Battery applet UI not as specified
+  * Fixes: NB#160053 - Duicontrolpanel crash
+
+ -- David Kedves <dkedves@blumsoft.eu>  Tue, 16 Mar 2010 11:31:34 +0100
+
+systemui-applets (0.12.2) harmattan; urgency=low
+
+  * Split system-ui -> system-ui / systemui-applets
+
+ -- David Kedves <dkedves@blumsoft.eu>  Tue, 23 Feb 2010 09:42:38 +0100
+
+system-ui (0.12.1-2) harmattan; urgency=low
+
+  * Fixes some crashes:
+    - Battery applet
+    - Display applet
+  * Install VolumePlugin properly
+  * TouchScreen/Shutdown UI seems works properly on latest image (with this
+    pkg)
+
+ -- David Kedves <dkedves@blumsoft.eu>  Fri, 19 Feb 2010 13:42:06 +0100
